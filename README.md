@@ -19,6 +19,8 @@ Your App App id prefix can be found below your name in the top right of the appl
 
 Mine looks like this: QLN6949UL2.com.universal-links-test.app
 
+You need to set content headers to application/json in the next.config.js
+
 
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
