@@ -2,7 +2,7 @@
      "applinks": {
          "details": [
               {
-                "appIDs": [ "APPLE_APP_ID" ],
+                "appIDs": [ "QLN6949UL2.com.universal-links-test.app" ],
                 "components": [
                   {
                      "#": "no_universal_links",
@@ -18,6 +18,6 @@
           ]
       },
       "webcredentials": {
-         "apps": [ "APPLE_APP_ID" ]
+         "apps": [ "QLN6949UL2.com.universal-links-test.app" ]
       }
    }

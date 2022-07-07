@@ -10,6 +10,21 @@ npm run dev
 yarn dev
 ```
 
+## Apple Universal links, create an app to test with TestFlight
+
+Step 1. You need a developer account
+Step 2. Create a new app, go in to Edit your App ID Configuration and ensure that Associated Domains is selected, this [youtube video](https://www.youtube.com/watch?v=DLvdZtTAJrE&ab_channel=SeanAllen) by Sean Allen explains the process
+Step 3. Build the react native app by running `expo build:ios`, it can take about 15 minutes to build. Once its finished building click the link to download the ipa file. 
+Step 4. You need Transporter to upload the app to the app store. 
+
+## Add the Apple app details to 
+
+Your App App id prefix can be found below your name in the top right of the apple developer page. This is connected to your app bundle id which will be used in the AASA folder. 
+
+QLN6949UL2.com.universal-links-test.app
+
+
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
