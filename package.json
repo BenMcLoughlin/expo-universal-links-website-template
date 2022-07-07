@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "next": "12.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "scripts": {
+    "dev": "set NODE_ENV=development && next",
+    "preview": "prisma generate && prisma migrate deploy && next build && set NODE_ENV=preview",
+    "build": "prisma generate && prisma migrate deploy && next build && set NODE_ENV=production",
+    "start": "next start"
+},
+  "devDependencies": {
+    "eslint": "8.19.0",
+    "eslint-config-next": "12.2.0"
+  }
+}
