@@ -16,6 +16,10 @@ export default function Home() {
           Sample of a hosted website you can use to handle your universal links.
         </h1>
 
+        <p className={styles.description}>
+          Get started by editing{' '}
+          <code className={styles.code}>pages/index.js</code>
+        </p>
 
         <div className={styles.grid}>
           <a href="https://docs.expo.dev/guides/linking/#universaldeep-links-without-a-custom-scheme" className={styles.card}>
@@ -23,7 +27,15 @@ export default function Home() {
             <p>Expo Universal Links Documentation.</p>
           </a>
 
-
+          <a
+            href="https://expo-universal-links-website-template.vercel.app/.well-known/apple-app-site-association"
+            className={styles.card}
+          >
+            <h2>Your Live AASA Link</h2>
+            <p>
+              Hopefully it returns JSON....
+            </p>
+          </a>
         </div>
       </main>
 
