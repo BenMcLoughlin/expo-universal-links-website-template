@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
 
-module.exports = nextConfig
+module.exports = {
+    headers: [
+        {
+            source: '/.well-known/apple-app-site-association',
+            headers: [
+                {
+                    key: 'Content-Type',
+                    value: 'application/json'
+                }
+            ]
+        }
+    ]
+};
