@@ -23,20 +23,19 @@ You need to set content headers to application/json in the next.config.js
 
 ```
 module.exports = {
-    async headers() {
-        return [
-            {
-                source: '/.well-known/apple-app-site-association',
-                headers: [
-                    {
-                        key: 'Content-Type',
-                        value: 'application/json'
-                    }
-                ]
-            }
-        ];
-    }
+    headers: [
+        {
+            source: '/.well-known/apple-app-site-association',
+            headers: [
+                {
+                    key: 'Content-Type',
+                    value: 'application/json'
+                }
+            ]
+        }
+    ]
 };
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
