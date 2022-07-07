@@ -2,13 +2,8 @@
 
 ## Example of website required to host .wellknown files for expo universal links
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-```bash
-npm run dev
-# or
-yarn dev
-```
+This is a [Next.js](https://nextjs.org/) website and hosted with [vercel](https://vercel.com/solutions/nextjs). 
+once you've connected your git repo with vercel so it can be hosted, in vercel go to Project Settings and change Framework preset from Other to Next.js.
 
 ## Apple Universal links, create an app to test with TestFlight
 
