@@ -19,9 +19,10 @@ Step 4. You need Transporter to upload the app to the app store.
 
 ## Add the Apple app details to 
 
+Create the apple site association file following these [docs](https://developer.apple.com/documentation/bundleresources/applinks) 
 Your App App id prefix can be found below your name in the top right of the apple developer page. This is connected to your app bundle id which will be used in the AASA folder. 
 
-QLN6949UL2.com.universal-links-test.app
+Mine looks like this: QLN6949UL2.com.universal-links-test.app
 
 
 
