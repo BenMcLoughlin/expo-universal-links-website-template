@@ -19,45 +19,42 @@ Your App App id prefix can be found below your name in the top right of the appl
 
 Mine looks like this: QLN6949UL2.com.universal-links-test.app
 
-You need to set content headers to application/json in the next.config.js
+One of the big challeneges with next.js is they use internal routing to manage the server side props. This causes issues with going to the /.well-known/apple-app-site-association link as it thinks
+it is a folder. The workaround is to use a redirect that will send apple to an api that will serve the json. This can be set in the next.config.js like so
 
 ```
 module.exports = {
-    headers: [
-        {
-            source: '/.well-known/apple-app-site-association',
-            headers: [
-                {
-                    key: 'Content-Type',
-                    value: 'application/json'
-                }
-            ]
-        }
-    ]
+    async redirects() {
+        return [
+            {
+                source: '/.well-known/apple-app-site-association',
+                destination: '/api/apple-app-site-association',
+                permanent: true
+            }
+        ];
+    }
 };
 
 ```
+Then you need to create a api file that returns the json. You can view mine at pages/api/apple-app-site-association.js
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Next you need to test that it works using the [AASA validator](https://branch.io/resources/aasa-validator/). Go to the website and enter the details, in my case they are: 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Domain / Web Page: expo-universal-links-website-template.vercel.app
+Apple App Prefix: QLN6949UL2
+Bundle Identifier: com.universal-links-test.app
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Hopefully you get all green indicators showing that it passed. 
+## Download app to your phone using Test Flight
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Add an email address you can access on your phone to the TestFlight testors list and send yourself a link to the app. Then you can download the test app to your phone. 
 
-## Learn More
+## Create the universal link and send it to your phone via email
 
-To learn more about Next.js, take a look at the following resources:
+In my case the universal link is the link to my hosted website, expo-universal-links-website-template.vercel.app/, with the extension defined in my AASA file, where I'd used /app.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`https://expo-universal-links-website-template.vercel.app/app`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Send the link to yourself via email so you can access it in your phone. Click on it, and fingers crossed, the app will open. 
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# expo-universal-links-website-template
