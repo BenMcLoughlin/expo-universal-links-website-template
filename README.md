@@ -36,6 +36,7 @@ module.exports = {
 };
 
 ```
+
 Then you need to create a api file that returns the json. You can view mine at pages/api/apple-app-site-association.js
 
 Next you need to test that it works using the [AASA validator](https://branch.io/resources/aasa-validator/). Go to the website and enter the details, in my case they are: 
